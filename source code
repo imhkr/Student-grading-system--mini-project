@@ -1,0 +1,81 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+int main()
+{
+    string g;
+    int nn;
+    int n;
+    cin>>nn;
+    int t=0;
+     int ge[nn];
+     for(int i=0;i<nn;i++)
+     {
+         cin>>ge[i];
+     }
+     for(int i=0;i<nn;i++)
+     {
+     n=ge[i];
+     if(n>=38)
+     {
+         for(int j=1;j<3;j++)
+         {
+             n=ge[i];
+           //  cout<<n<<endl;
+             n=n+j;
+             if(n%5==0)
+             {
+             t+=1;   
+             break;
+             } 
+                }
+     if(t==1)
+     {
+         if(n<90 and n>100)
+         {
+             g='A';
+         }
+         if(n<=80 and n>=90)
+         {
+             g='B';
+         }
+          if(n<=75 and n>=80)
+         {
+             g='C';
+         }
+          if(n<=65 and n>=75)
+         {
+             g='D';
+         }
+          if(n<=55 and n>=65)
+         {
+             g='E';
+         }
+          if(n<=40 and n>=55)
+         {
+             g='P';
+         }
+          if(n<=0 and n>=40)
+         {
+             g='F';
+         }
+         cout<<n<<"GRADE"<<g<<endl;
+     }
+     }
+    if (n<38)
+     {
+     cout<<ge[i]<<endl;
+     }
+     else if (t==0)
+     {
+         cout<<ge[i]<<endl;
+     }
+     //}
+     t=0;
+     
+}
+}
+
+
+
